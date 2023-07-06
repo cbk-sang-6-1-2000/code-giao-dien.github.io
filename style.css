@@ -55,6 +55,7 @@ h1{
 }
 .site-main .main-top{
     display: flex;
+    justify-content: end;
 }
 
 ul{
@@ -65,8 +66,7 @@ ul{
 }
 
 .main-top .price-content{
-    margin-left: 140px;
-    width: 430px;
+    max-width: 430px;
     height: 410px;
 }
 
@@ -78,13 +78,15 @@ ul{
 }
 
 .price-content ul{
-    width: 270px;
+    /* max-width: 270px; */
     justify-content: center;
     display: flex;
     align-items: center;
     text-align: center;
     box-sizing: border-box;
-    padding-left: 150px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 0;
 }
 
 .price-content li{
@@ -109,7 +111,9 @@ ul{
 }
 
 .price-content .price{
-    width: 425px;
+    padding: 0 20px;
+    max-width: 425px;
+    width: 100%;
     height: 90px;
     border: 2px dashed;
     border-color: red;
@@ -118,12 +122,13 @@ ul{
 
 
 .price button{
-    width: 390px;
+    max-width: 390px;
     height: 70px;
     margin-top: -15px;
     background-color: red;
     font-family: 'play-Bold';
     font-size: 48px;
+    width: 100%;
 }
 
 .price .text-price{
@@ -146,8 +151,8 @@ ul{
 .form-content{
     background-color: #27293d;
     color: #fff;
-    width: 570px;
-    height: 410px;
+    max-width: 570px;
+    width: 100%;
     margin-left: 30px;
 }
 
@@ -168,14 +173,14 @@ hr {
 }
 
 .form-content .site-btn-button {
-    width: 186px;
+    max-width: 186px;
     height: 45px;
     background-image: url('images/assests/button.jpg');
     background-position: center center;
     background-size: cover;
     border: none;
     margin-top: 10px;
-    margin-left: 325px;
+    width: 100%;
  }
 
 .row .site-input{
@@ -219,13 +224,23 @@ hr {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .main-bottom li{
     margin-right: 30px;
+    margin-bottom: 20px;
 }
 
+.main-bottom li:last-child {
+    margin-right: 0;
+}
+
+.btn-12{
+    display: flex;
+    margin-bottom: 47px;
+    justify-content: end;
+}
 /*CSS footer */
 .site-footer{
     background-color: #212121;
@@ -249,7 +264,8 @@ hr {
 }
 
 .site-footer .footer-text {
-    width: 570px;
+    max-width: 570px;
+    width: 50%;
     margin-right: 30px;
     font-family: 'play-Regular';
 }
@@ -264,4 +280,16 @@ hr {
 .site-footer .address p{
     padding-top: 14px;
     font-size: 14px;
+}
+
+.site-footer .images {
+    max-width: 570px;
+    width: 50%;
+    max-height: 300px;
+    height: 100%;
+}
+
+.site-footer iframe {
+    width: 100%;
+    height: 100%;
 }
